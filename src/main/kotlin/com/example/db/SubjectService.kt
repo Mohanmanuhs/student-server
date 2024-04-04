@@ -14,14 +14,14 @@ interface SubjectService {
     suspend fun getTest1Mark(usn:String):Subject?
     suspend fun getTest2Mark(usn:String):Subject?
     suspend fun getTest3Mark(usn:String):Subject?
-    suspend fun updateTest1Mark(subject: Subject):Boolean
-    suspend fun updateTest2Mark(subject: Subject):Boolean
-    suspend fun updateTest3Mark(subject: Subject):Boolean
+    suspend fun updateTest1Mark(subject: Subject,sbNumber:String):Boolean
+    suspend fun updateTest2Mark(subject: Subject,sbNumber:String):Boolean
+    suspend fun updateTest3Mark(subject: Subject,sbNumber:String):Boolean
     suspend fun addTotalClasses(subject: Subject):Subject?
     suspend fun addAttendedClasses(subject: Subject):Subject?
     suspend fun getTotalClasses(usn:String):Subject?
     suspend fun getAttendedClasses(usn:String):Subject?
-    suspend fun updateAttendedClasses(subject: Subject):Boolean
-    suspend fun updateTotalClasses(subject: Subject):Boolean
+    suspend fun updateAttendedClasses(subject: Subject,sbNumber:String):Boolean
+    suspend fun updateTotalClasses(subject: Subject,sbNumber:String):Boolean
 
 }

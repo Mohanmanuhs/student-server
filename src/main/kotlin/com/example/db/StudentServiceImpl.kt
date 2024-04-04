@@ -6,6 +6,7 @@ import com.example.plugins.dbQuery
 import org.jetbrains.exposed.sql.ResultRow
 import org.jetbrains.exposed.sql.insert
 import org.jetbrains.exposed.sql.selectAll
+import org.jetbrains.exposed.sql.update
 
 
 private fun resultRowToStudent(row: ResultRow):Student{
@@ -27,6 +28,13 @@ class StudentServiceImpl:StudentService {
 
     override suspend fun getStudent(usn: String): Student?= dbQuery{
         Students.selectAll().where { (Students.usn eq usn) }.map { resultRowToStudent(it) }.singleOrNull()
+    }
+
+    override suspend fun updateStudent(student: Student): Boolean = dbQuery{
+        Students.update({ Students.usn eq student.usn}){
+            it[name]=student.name
+            it[sem]=student.sem
+        }>0
     }
 
 }

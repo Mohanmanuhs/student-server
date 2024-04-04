@@ -20,16 +20,16 @@ data class Subject(
 
 object Subjects : Table() {
     val usn = varchar("usn", 100)
-    val sb1 = varchar("sb1",10)
-    val sb2 = varchar("sb2",10)
-    val sb3 = varchar("sb3",10)
-    val sb4 = varchar("sb4",10)
-    val sb5 = varchar("sb5",10)
-    val sb6 = varchar("sb6",10)
-    val sb7 = varchar("sb7",10)
-    val sb8 = varchar("sb8",10)
-    val sb9 = varchar("sb9",10)
-    val sb10 = varchar("sb10",10)
+    val sb1 = varchar("sb1", 10)
+    val sb2 = varchar("sb2", 10)
+    val sb3 = varchar("sb3", 10)
+    val sb4 = varchar("sb4", 10)
+    val sb5 = varchar("sb5", 10)
+    val sb6 = varchar("sb6", 10)
+    val sb7 = varchar("sb7", 10)
+    val sb8 = varchar("sb8", 10)
+    val sb9 = varchar("sb9", 10)
+    val sb10 = varchar("sb10", 10)
 
     override val primaryKey: PrimaryKey
         get() = PrimaryKey(usn)

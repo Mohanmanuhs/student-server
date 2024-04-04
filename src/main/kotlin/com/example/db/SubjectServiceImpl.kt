@@ -1,7 +1,5 @@
 package com.example.db
 
-import com.example.models.Student
-import com.example.models.Students
 import com.example.models.Subject
 import com.example.models.Subjects
 import com.example.plugins.dbQuery
@@ -129,48 +127,54 @@ class SubjectServiceImpl : SubjectService {
     }
 
 
-    override suspend fun updateTest1Mark(subject: Subject): Boolean = dbQuery {
+    override suspend fun updateTest1Mark(subject: Subject,sbNumber: String): Boolean = dbQuery {
         Subjects.update({ Subjects.usn eq subject.usn }) {
-            it[sb1] = subject.sb1
-            it[sb2] = subject.sb2
-            it[sb3] = subject.sb3
-            it[sb4] = subject.sb4
-            it[sb5] = subject.sb5
-            it[sb6] = subject.sb6
-            it[sb7] = subject.sb7
-            it[sb8] = subject.sb8
-            it[sb9] = subject.sb9
-            it[sb10] = subject.sb10
+            when(sbNumber){
+                "1"-> it[sb1] = subject.sb1
+                "2" -> it[sb2] = subject.sb2
+                "3" -> it[sb3] = subject.sb3
+                "4" -> it[sb4] = subject.sb4
+                "5" -> it[sb5] = subject.sb5
+                "6" -> it[sb6] = subject.sb6
+                "7" -> it[sb7] = subject.sb7
+                "8" -> it[sb8] = subject.sb8
+                "9" -> it[sb9] = subject.sb9
+                "10" -> it[sb10] = subject.sb10
+            }
         } > 0
     }
 
-    override suspend fun updateTest2Mark(subject: Subject): Boolean = dbQuery {
+    override suspend fun updateTest2Mark(subject: Subject,sbNumber: String): Boolean = dbQuery {
         Subjects.update({ Subjects.usn eq subject.usn }) {
-            it[sb1] = subject.sb1
-            it[sb2] = subject.sb2
-            it[sb3] = subject.sb3
-            it[sb4] = subject.sb4
-            it[sb5] = subject.sb5
-            it[sb6] = subject.sb6
-            it[sb7] = subject.sb7
-            it[sb8] = subject.sb8
-            it[sb9] = subject.sb9
-            it[sb10] = subject.sb10
+            when(sbNumber){
+                "1"-> it[sb1] = subject.sb1
+                "2" -> it[sb2] = subject.sb2
+                "3" -> it[sb3] = subject.sb3
+                "4" -> it[sb4] = subject.sb4
+                "5" -> it[sb5] = subject.sb5
+                "6" -> it[sb6] = subject.sb6
+                "7" -> it[sb7] = subject.sb7
+                "8" -> it[sb8] = subject.sb8
+                "9" -> it[sb9] = subject.sb9
+                "10" -> it[sb10] = subject.sb10
+            }
         } > 0
     }
 
-    override suspend fun updateTest3Mark(subject: Subject): Boolean = dbQuery {
+    override suspend fun updateTest3Mark(subject: Subject,sbNumber: String): Boolean = dbQuery {
         Subjects.update({ Subjects.usn eq subject.usn }) {
-            it[sb1] = subject.sb1
-            it[sb2] = subject.sb2
-            it[sb3] = subject.sb3
-            it[sb4] = subject.sb4
-            it[sb5] = subject.sb5
-            it[sb6] = subject.sb6
-            it[sb7] = subject.sb7
-            it[sb8] = subject.sb8
-            it[sb9] = subject.sb9
-            it[sb10] = subject.sb10
+            when(sbNumber){
+                "1"-> it[sb1] = subject.sb1
+                "2" -> it[sb2] = subject.sb2
+                "3" -> it[sb3] = subject.sb3
+                "4" -> it[sb4] = subject.sb4
+                "5" -> it[sb5] = subject.sb5
+                "6" -> it[sb6] = subject.sb6
+                "7" -> it[sb7] = subject.sb7
+                "8" -> it[sb8] = subject.sb8
+                "9" -> it[sb9] = subject.sb9
+                "10" -> it[sb10] = subject.sb10
+            }
         } > 0
     }
 
@@ -217,33 +221,37 @@ class SubjectServiceImpl : SubjectService {
     }
 
 
-    override suspend fun updateAttendedClasses(subject: Subject): Boolean = dbQuery {
+    override suspend fun updateAttendedClasses(subject: Subject,sbNumber: String): Boolean = dbQuery {
         Subjects.update({ Subjects.usn eq subject.usn }) {
-            it[sb1] = subject.sb1
-            it[sb2] = subject.sb2
-            it[sb3] = subject.sb3
-            it[sb4] = subject.sb4
-            it[sb5] = subject.sb5
-            it[sb6] = subject.sb6
-            it[sb7] = subject.sb7
-            it[sb8] = subject.sb8
-            it[sb9] = subject.sb9
-            it[sb10] = subject.sb10
+            when(sbNumber){
+                "1"-> it[sb1] = subject.sb1
+                "2" -> it[sb2] = subject.sb2
+                "3" -> it[sb3] = subject.sb3
+                "4" -> it[sb4] = subject.sb4
+                "5" -> it[sb5] = subject.sb5
+                "6" -> it[sb6] = subject.sb6
+                "7" -> it[sb7] = subject.sb7
+                "8" -> it[sb8] = subject.sb8
+                "9" -> it[sb9] = subject.sb9
+                "10" -> it[sb10] = subject.sb10
+            }
         } > 0
     }
 
-    override suspend fun updateTotalClasses(subject: Subject): Boolean = dbQuery {
+    override suspend fun updateTotalClasses(subject: Subject,sbNumber:String): Boolean = dbQuery {
         Subjects.update({ Subjects.usn eq subject.usn }) {
-            it[sb1] = subject.sb1
-            it[sb2] = subject.sb2
-            it[sb3] = subject.sb3
-            it[sb4] = subject.sb4
-            it[sb5] = subject.sb5
-            it[sb6] = subject.sb6
-            it[sb7] = subject.sb7
-            it[sb8] = subject.sb8
-            it[sb9] = subject.sb9
-            it[sb10] = subject.sb10
+            when(sbNumber){
+                "1"-> it[sb1] = subject.sb1
+                "2" -> it[sb2] = subject.sb2
+                "3" -> it[sb3] = subject.sb3
+                "4" -> it[sb4] = subject.sb4
+                "5" -> it[sb5] = subject.sb5
+                "6" -> it[sb6] = subject.sb6
+                "7" -> it[sb7] = subject.sb7
+                "8" -> it[sb8] = subject.sb8
+                "9" -> it[sb9] = subject.sb9
+                "10" -> it[sb10] = subject.sb10
+            }
         } > 0
     }
 }
